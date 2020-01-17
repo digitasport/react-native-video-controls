@@ -391,7 +391,7 @@ export default class VideoPlayer extends Component {
         if(this.mounted) {
             let state = this.state;
             state.showControls = false;
-            this.hideControlAnimation();
+            // this.hideControlAnimation();
 
             this.setState( state );
         }
@@ -1133,9 +1133,9 @@ export default class VideoPlayer extends Component {
                         source={ this.props.source }
                     />
                     { this.renderError() }
-                    { this.renderTopControls() }
+                    { this.state.showControls && this.renderTopControls() }
                     { this.renderLoader() }
-                    { this.renderBottomControls() }
+                    { this.state.showControls && this.renderBottomControls() }
                 </View>
             </TouchableWithoutFeedback>
         );
