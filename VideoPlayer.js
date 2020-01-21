@@ -1078,7 +1078,7 @@ export default class VideoPlayer extends Component {
 
         let source = this.state.paused === true ? require('./assets/img/play.png') : require('./assets/img/pause.png');
         return this.renderControl(
-            <Image source={source} style={{ transform: [{ rotateY: "180deg" }] }} />,
+            <Image source={source} style={{ transform: [{ rotateY: I18nManager.isRTL ? "180deg" : "0deg" }] }} />,
             this.methods.togglePlayPause,
             styles.controls.playPause
         );
