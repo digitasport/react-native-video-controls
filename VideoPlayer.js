@@ -1193,7 +1193,7 @@ export default class VideoPlayer extends Component {
 
                         source={this.props.source}
                     />
-                    {this.state.currentTime === 0 && <Image
+                    {this.state.currentTime === 0 && this.state.paused && <Image
                       style={[styles.player.video, this.styles.videoStyle]}
                       source={{uri: this.props.image}}
                     />}
