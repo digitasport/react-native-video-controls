@@ -31,6 +31,7 @@ export default class VideoPlayer extends Component {
         title: '',
         rate: 1,
         isFullscreen: false,
+        image: ""
     };
 
     constructor(props) {
@@ -1192,6 +1193,10 @@ export default class VideoPlayer extends Component {
 
                         source={this.props.source}
                     />
+                    {this.state.currentTime === 0 && <Image
+                      style={[styles.player.video, this.styles.videoStyle]}
+                      source={{uri: this.props.image}}
+                    />}
                     {this.renderError()}
                     {this.state.showControls && this.renderTopControls()}
                     {this.renderLoader()}
