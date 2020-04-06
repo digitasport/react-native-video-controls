@@ -263,11 +263,11 @@ export default class VideoPlayer extends Component {
     _onScreenTouch() {
         let state = this.state;
         const time = new Date().getTime();
-        const delta = time - state.lastScreenPress;
+        // const delta = time - state.lastScreenPress;
 
-        if (delta < 300) {
-            this.methods.toggleFullscreen();
-        }
+        // if (delta < 300) {
+        //     this.methods.toggleFullscreen();
+        // }
 
         this.methods.toggleControls();
         state.lastScreenPress = time;
